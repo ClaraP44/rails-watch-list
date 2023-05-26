@@ -1,1 +1,11 @@
 <h1><%= @list.name %></h1>
+<ul class="list-group">
+  <% @list.movies.each do |movie| %>
+    <li class="list-group-item">
+      <p><%= movie.title %></p>
+      <p><%= movie.overview %></p>
+      <p><%= movie.poster_url %></p>
+      <p><%= movie.rating %></p>
+  <% end %>
+    </li>
+</ul>
