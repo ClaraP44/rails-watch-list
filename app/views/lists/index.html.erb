@@ -1,18 +1,33 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>Save any kind of movies</h1>
-    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
-<h1>My Lists</h1>
-  <% @lists.each do |list| %>
-        <li class="list-group-item">
-          <%= link_to list.name, list_path(list) %>
-        </li>
-      <% end %>
-    </ul>
-    <%= link_to "Add a new List", new_list_path, class: 'btn btn-primary' %>
+
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>Save any kind of movies</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">My Lists</h2>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
+  </div>
+</div>
+
+
+
+
+<% @lists.each do |list| %>
+      <li class="list-group-item">
+        <%= link_to list.name, list_path(list) %>
+      </li>
+    <% end %>
+  </ul>
 
 
 <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
