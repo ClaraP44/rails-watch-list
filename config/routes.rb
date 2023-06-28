@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   end
   resources :bookmarks, only: %i[destroy]
 
+  # resources :movies
+
   root to: 'lists#index'
 end
